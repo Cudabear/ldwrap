@@ -6,7 +6,7 @@ MainState.prototype = {
     },
 
     create: function(){
-        
+
     },
 
     update: function(){

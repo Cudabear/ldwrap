@@ -14,22 +14,22 @@ StartupState.prototype = {
     },
 
     create: function(){
-       this.logoImage = this.add.sprite(this.world.centerX, this.world.centerY - 80, 'logoImage');
-       this.logoEye = this.add.sprite(this.world.centerX, this.world.centerY - 80, 'logoImage');
-       this.logoEye.animations.add('eye', [6, 7, 8, 9, 10, 11, 12, 13, 14], 9, false);
-       this.logoImage.animations.add('blink', [0, 1, 2, 3, 4, 5], 6, false);
-       this.logoEye.height = 256;
-       this.logoEye.width = 256;
-       this.logoImage.height = 256;
-       this.logoImage.width = 256;
-       this.logoEye.anchor.setTo(0.5);
-       this.logoImage.anchor.setTo(0.5);
-       this.logoEye.alpha = 0;
-       this.logoImage.alpha = 0;
+        this.logoImage = this.add.sprite(this.world.centerX, this.world.centerY - 80, 'logoImage');
+        this.logoEye = this.add.sprite(this.world.centerX, this.world.centerY - 80, 'logoImage');
+        this.logoEye.animations.add('eye', [6, 7, 8, 9, 10, 11, 12, 13, 14], 9, false);
+        this.logoImage.animations.add('blink', [0, 1, 2, 3, 4, 5], 6, false);
+        this.logoEye.height = 256;
+        this.logoEye.width = 256;
+        this.logoImage.height = 256;
+        this.logoImage.width = 256;
+        this.logoEye.anchor.setTo(0.5);
+        this.logoImage.anchor.setTo(0.5);
+        this.logoEye.alpha = 0;
+        this.logoImage.alpha = 0;
 
-       this.logoText = this.add.sprite(this.world.centerX, this.world.centerY + 80, 'logoText');
-       this.logoText.anchor.setTo(0.5);
-       this.logoText.alpha = 0;
+        this.logoText = this.add.sprite(this.world.centerX, this.world.centerY + 80, 'logoText');
+        this.logoText.anchor.setTo(0.5);
+        this.logoText.alpha = 0;
     },
 
     update: function(){
