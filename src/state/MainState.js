@@ -6,6 +6,8 @@ MainState.prototype = {
     },
 
     create: function(){
+        //remove this line if not using lighting effects
+        game.plugins.add(Phaser.Plugin.PhaserIlluminated);
 
     },
 
