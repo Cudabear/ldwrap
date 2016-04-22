@@ -43,6 +43,14 @@ LoadState.prototype = {
 
     create: function(){
         game.state.start('MainState');
+
+        Config.music.forEach(function(music){
+            Config.musicObjects[music.key] = game.add.sound(music.key, 1, true);
+        });
+
+        Config.sfx.forEach(function(sfx){
+            Config.sfxObjects[sfx.key] = game.add.sound(sfx.key, 1, false);
+        }, this);
     },
 
     update: function(){

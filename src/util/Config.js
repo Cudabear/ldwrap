@@ -23,5 +23,10 @@ Config = {
     //music loops by default
     music: [
         //{key: "MusicKey", filePath: "path/to/audiofile"}
-    ]
+    ],
+    //will be populated by all the music objects after load
+    musicObjects: { },
+    //will be populated by all the sfx objects after load
+    sfxObjects: { },
+
 }
