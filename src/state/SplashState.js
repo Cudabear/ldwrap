@@ -1,6 +1,6 @@
-StartupState = function(){ }
+SplashState = function(){ }
 
-StartupState.prototype = {
+SplashState.prototype = {
     logoImage: null,
     playedBlink: false,
     logoEye: null,
@@ -8,12 +8,15 @@ StartupState.prototype = {
     frameCounter: 0,
 
     preload: function(){
+        console.log('preload splash state');
         this.load.atlasJSONHash('logoImage', 'res/img/wrapper/manfredi.png', 'res/img/wrapper/manfredi.json');
         this.load.image('logoText', 'res/img/wrapper/logo.png');
         this.load.image('loadBar', 'res/img/wrapper/loadbar.png');
     },
 
     create: function(){
+        console.log('create splash state');
+
         this.logoImage = this.add.sprite(this.world.centerX, this.world.centerY - 80, 'logoImage');
         this.logoEye = this.add.sprite(this.world.centerX, this.world.centerY - 80, 'logoImage');
         this.logoEye.animations.add('eye', [6, 7, 8, 9, 10, 11, 12, 13, 14], 9, false);
@@ -68,7 +71,8 @@ StartupState.prototype = {
             }
         }
 
-        if(this.frameCounter > 720){
+        if(this.frameCounter > 720 || game.input.keyboard.lastKey){
+            console.log('kicking off load state');
             this.state.start('LoadState');
         }  
     },

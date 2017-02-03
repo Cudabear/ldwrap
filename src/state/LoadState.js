@@ -4,11 +4,7 @@ LoadState.prototype = {
     progressBar: null,
 
     preload: function(){
-        //configure the scaling to fit the window
-        game.scale.minHeight = Config.size.height;
-        game.scale.minWidth = Config.size.width;
-        game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-        game.stage.smoothed = false;
+        console.log('preload load state');
 
         this.progressBar = this.add.sprite(this.game.world.centerX - 250, this.game.world.centerY, 'loadBar');
         this.progressBar.anchor.setTo(0, 0.5);
@@ -42,7 +38,7 @@ LoadState.prototype = {
     },
 
     create: function(){
-        game.state.start('MainState');
+        console.log('create load state');
 
         Config.music.forEach(function(music){
             Config.musicObjects[music.key] = game.add.sound(music.key, 1, true);
@@ -51,6 +47,9 @@ LoadState.prototype = {
         Config.sfx.forEach(function(sfx){
             Config.sfxObjects[sfx.key] = game.add.sound(sfx.key, 1, false);
         }, this);
+
+        console.log('kicking off the game');
+        game.state.start('MainState');
     },
 
     update: function(){

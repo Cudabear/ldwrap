@@ -1,7 +1,7 @@
 Config = {
     name: "ReplaceWithGameName",
     version: "0.0.0",
-    size: {width: 480, height: 270},
+    size: {width: 1280, height: 720},
     sprites: [
         //{key: "SpriteKey", imagePath: "path/to/image"}
         {key: "phaser", imagePath: "res/img/wrapper/phaser-logo-small.png"},
